@@ -4,21 +4,49 @@
     align-items: center;
     justify-content: center;
     &_form {
-       
+        width: 300px;
     }
     &_label-input {
         display: flex;
         flex-direction: column;
         margin-bottom: 15px;
         margin-top: 15px;
-        width: 250px;
+        width: 100%;
         label {
-            
+            padding-bottom: 10px;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 24px;
         }
         input {
-            padding: 0 0 0 10px;
-            border-radius: 10px;
+            text-align: flex;
             border: 2px solid #646363;
+            padding: 10px 0 10px 10px;
+            border-radius: 10px;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 24px;
         }
-    }
+       } 
+       &_sendbtn {
+            width: 300px;
+        &_btn {
+            background-color: #FA7070;
+            padding-top: 10px;
+            border-radius: 10px;
+            border: none;
+            width: 100%;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 29px;
+        }
+       }
+
+    
 }
