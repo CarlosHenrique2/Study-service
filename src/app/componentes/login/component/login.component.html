@@ -1,15 +1,15 @@
 <div class="login_form_container">
-    <form class="login_form_container_form" [formGroup]="loginForm" (ngSubmit)="sendLogin2()">
+    <form class="login_form_container_form" [formGroup]="loginForm">
         <div class="login_form_container_label-input">
             <label for="">Login</label>
-            <input type="text" placeholder="Login" formControlName="name">
+            <input type="text" placeholder="Login" formControlName="login">
         </div>
         <div class="login_form_container_label-input">
             <label for="">Password</label>
             <input type="password" placeholder="Password" formControlName="password">
         </div>
         <div class="login_form_container_sendbtn">
-            <button class="login_form_container_sendbtn_btn" type="submit"> Login </button>
+            <button class="login_form_container_sendbtn_btn" type="submit" (click)="sendLogin()"> Login </button>
         </div>
     </form>
 </div>

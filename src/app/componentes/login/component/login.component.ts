@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit {
   genFormLogin(){
     this.loginForm = this.loginBuilder.group(
       {
-        name: ['', ''],
+        login: ['', ''],
         password: ['', '']
       }
     )
@@ -33,27 +33,16 @@ export class LoginComponent implements OnInit {
     let control = this.loginForm.controls;
 
     let json = {
-      username: control['name'].value,
+      login: control['login'].value,
       password: control['password'].value
     }
 
     this.loginSubmit$ = this.clientService.login(json).subscribe({
       next: (next) => { console.info(next) },
-      error: (error) => { console.warn(error) },
+      error: (error) => { console.warn(error), alert('erro') },
       complete: () => {
       }
     })
-  }
-
-  async sendLogin2() {
-    const res = await this.clientService.login2()
-    console.log(res)
-    if (res.email == this.loginForm.get('name')?.value && res.password == this.loginForm.get('password')?.value ) {
-      alert("deu bom")
-      
-    } else {
-      alert("deu ruim")
-    }
   }
 
   ngOnDestroy(){
