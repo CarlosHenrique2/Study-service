@@ -8,7 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatInputModule } from '@angular/material/input';
 
-import { ConsultaModule } from './componentes/consulta/consulta.module';
+
 import { ContratoModule } from './componentes/contrato/contrato.module';
 import { LoginModule } from './componentes/login/login.module';
 import { MatCardModule } from '@angular/material/card';
@@ -25,7 +25,6 @@ import { ComponentComponent } from './componentes/results/component/component.co
     BrowserAnimationsModule,
     MatSliderModule,
     MatInputModule,
-    ConsultaModule,
     ContratoModule,
     LoginModule,
     MatCardModule
