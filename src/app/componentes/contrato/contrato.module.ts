@@ -11,7 +11,9 @@ import { MatInputModule } from '@angular/material/input';
     ContratoComponent
   ],
   imports: [
-    CommonModule,MatSliderModule,MatInputModule
+    CommonModule,
+    MatSliderModule,
+    MatInputModule
   ],
   exports: [ContratoComponent]
 })

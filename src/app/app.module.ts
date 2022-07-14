@@ -12,12 +12,11 @@ import { MatInputModule } from '@angular/material/input';
 import { ContratoModule } from './componentes/contrato/contrato.module';
 import { LoginModule } from './componentes/login/login.module';
 import { MatCardModule } from '@angular/material/card';
-import { ComponentComponent } from './componentes/results/component/component.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    ComponentComponent,
   ],
   imports: [
     BrowserModule,
