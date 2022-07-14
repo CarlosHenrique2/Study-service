@@ -5,6 +5,7 @@ import { Subscription } from 'rxjs';
 import { Router } from '@angular/router';
 
 
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -14,7 +15,11 @@ export class LoginComponent implements OnInit {
   loginForm!: FormGroup;
   loginSubmit$?: Subscription;
  
-  constructor(private loginBuilder: FormBuilder, private clientService: LoginService, private router: Router) { }
+  constructor(
+    private router: Router,
+    private loginBuilder: FormBuilder, 
+    private clientService: LoginService
+    ) { }
 
   ngOnInit(): void {
     this.genFormLogin();
@@ -37,8 +42,12 @@ export class LoginComponent implements OnInit {
       password: control['password'].value
     }
 
-    this.loginSubmit$ = this.clientService.login(json).subscribe({
-      next: (next) => { console.info(next) },
+    this.loginSubmit$ = this.clientService.login().subscribe({
+      next: (next) => { 
+        
+        console.info(next) 
+        this.router.navigate(['home'])
+      },
       error: (error) => { console.warn(error), alert('erro') },
       complete: () => {
       }

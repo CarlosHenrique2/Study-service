@@ -1,15 +1,23 @@
-<div class="login_form_container">
-    <form class="login_form_container_form" [formGroup]="loginForm">
-        <div class="login_form_container_label-input">
-            <label for="">Login</label>
-            <input type="text" placeholder="Login" formControlName="login">
+
+<main class="main">
+    <div class="main_title_form_container">
+        <h1 class="main_title_form_container_title">Welcome</h1>
+    </div>
+    <div class="main_login_form_container">
+        <div class="login_form_container">
+            <form class="login_form_container_form" [formGroup]="loginForm">
+                <div class="login_form_container_label-input">
+                    <label for="">Login</label>
+                    <input type="text" placeholder="Login" formControlName="login">
+                </div>
+                <div class="login_form_container_label-input">
+                    <label for="">Password</label>
+                    <input type="password" placeholder="Password" formControlName="password">
+                </div>
+                <div class="login_form_container_sendbtn">
+                    <button class="login_form_container_sendbtn_btn" type="submit" (click)="sendLogin()"> Login </button>
+                </div>
+            </form>
         </div>
-        <div class="login_form_container_label-input">
-            <label for="">Password</label>
-            <input type="password" placeholder="Password" formControlName="password">
-        </div>
-        <div class="login_form_container_sendbtn">
-            <button class="login_form_container_sendbtn_btn" type="submit" (click)="sendLogin()"> Login </button>
-        </div>
-    </form>
-</div>
+    </div>
+</main>
