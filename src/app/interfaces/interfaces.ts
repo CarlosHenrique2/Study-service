@@ -1,5 +1,4 @@
-export interface get {
-    id: number,
+export interface documento {
     iddocumento: string,
     documento: {
         data: string,

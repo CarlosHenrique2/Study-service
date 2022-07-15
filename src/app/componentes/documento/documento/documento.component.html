@@ -2,32 +2,35 @@
     <section class="menu_home">
        <h3 class="title-service">Service</h3>
        <div class="menu_home_content">
-           <!--<a href="">Contratos</a>-->
-          <!--<a href="">Documento</a>-->
-           <!--<a href="">Results</a>-->
-           <a class="link-service" >ttttt</a>
        </div>
    </section>
 
    <section class="menu_info">
-    <form >
-        <div class="login_form_container_label-input">
-            <label for="">Informe o documento</label>
-            <input type="text" placeholder="Login" formControlName="login">
+       <div>
+           <form [formGroup]="logdocumento">
+               <div class="login_form_container_label-input">
+                   <label for="">Informe o documento</label>
+                   <input type="text" placeholder="documento" formControlName="documento">
+                </div>
+                <button (click)="send()">pesquisa</button>
+            </form>
         </div>
-        <div class="login_form_container_label-input">
-            <label for="">Data encontrada do documento</label>
-            <input type="text" placeholder="Login" formControlName="login">
+        <div>
+        <form>
+            <div class="login_form_container_label-input">
+                <label for="">Data encontrada do documento</label>
+                <input type="text" placeholder="data" formControlName="data_documeto">
+            </div>
+            <div class="login_form_container_label-input">
+                <label for="">Cliente vinculado ao documento</label>
+                <input type="text" placeholder="nome do cliente" formControlName="nome_cliente">
+            </div>
+            <div class="login_form_container_label-input">
+                <label for="">Valor vinculado ao documento</label>
+                <input type="text" placeholder="valor" formControlName="valor_documento">
+            </div>
+        </form>
         </div>
-        <div class="login_form_container_label-input">
-            <label for="">Cliente vinculado ao documento</label>
-            <input type="text" placeholder="Login" formControlName="login">
-        </div>
-        <div class="login_form_container_label-input">
-            <label for="">Valor vinculado ao documento</label>
-            <input type="text" placeholder="Login" formControlName="login">
-        </div>
-    </form>
    </section>
 </main>
 

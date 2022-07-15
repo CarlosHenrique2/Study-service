@@ -3,8 +3,8 @@ import { CommonModule } from '@angular/common';
 import { DocumentoComponent } from './documento/documento.component';
 import { MatInputModule } from '@angular/material/input';
 import { MatSliderModule } from '@angular/material/slider';
-
-
+import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -13,7 +13,10 @@ import { MatSliderModule } from '@angular/material/slider';
   imports: [
     CommonModule,
     MatSliderModule,
-    MatInputModule
+    MatInputModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule
   ]
 })
 export class DocumentoModule { }

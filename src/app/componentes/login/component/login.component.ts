@@ -1,10 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { FormGroup, FormBuilder } from '@angular/forms';
 import { LoginService } from '../service/login.service';
 import { Subscription } from 'rxjs';
 import { Router } from '@angular/router';
-
-
 
 @Component({
   selector: 'app-login',
