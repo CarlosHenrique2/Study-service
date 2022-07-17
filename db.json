@@ -5,32 +5,27 @@
   },
   "documento": [
     {
+      "id": 1,
       "iddocumento": "47422626284",
-      "documento": {
-        "data": "30/06/2022",
-        "nomecliente": "Lucas",
-        "valor": "R$200.000,00"
-      }
+      "data": "30/06/2022",
+      "nomecliente": "Lucas",
+      "valor": "R$200.000,00"
     },
     {
-      "id": 1,
-      "iddocumento": "47422627882",
-      "documento": {
-        "data": "01/01/2022",
-        "nomecliente": "Mayer",
-        "valor": "R$50.000,00"
-      }
+      "id": 2,
+      "iddocumento": "234324234",
+      "data": "01/01/2022",
+      "nomecliente": "Mayer",
+      "valor": "R$50.000,00"
     }
   ],
   "contratos": [
     {
       "id": 1,
-      "iddocumento": "",
-      "documento": {
-        "data": "",
-        "nomecliente": "",
-        "valor": ""
-      }
+      "iddocumento": 2342432,
+      "data": "",
+      "nomecliente": "",
+      "valor": ""
     }
   ]
 }
