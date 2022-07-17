@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { environment } from 'src/environments/environment';
+import { environment } from 'src/environments/environment.prod';
 
 
 @Injectable({
@@ -11,7 +11,9 @@ export class DocumentoService {
   constructor(private http: HttpClient) { }
 
   getData() {
-    this.http.get(environment.urlDocument)
+   console.log(JSON.stringify(this.http.get("http://localhost:5000/documentos")));
   }
+
+  
 
 }

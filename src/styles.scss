@@ -7,3 +7,50 @@
     box-sizing: border-box;
     font-family: 'Inter', sans-serif;
 }
+
+.btn {
+    height: 24px;
+    width: 109px;
+    border: none;
+    background: transparent;
+    transition: 0.9s, linear, transform 2s;
+}
+
+.btn:hover {
+  border-bottom: 2px solid #FE8484;
+}
+
+.login_form_container_label-input {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    margin-left: 10px;
+    
+    input {
+        width: 312px;
+        padding: 4px 10px 4px 10px;
+        font-size: 20px;
+        border-radius: 10px;
+    }
+
+    label {
+        font-size: 20px;
+    }
+}
+
+.btnSearch {
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 30px;
+    background-color: #FA7070;
+    padding: 5px;
+    border-radius: 10px;
+    border: none;
+    width: 312px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 24px;
+    line-height: 29px;
+    color: white;
+} 
