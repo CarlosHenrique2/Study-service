@@ -1,19 +1,15 @@
 export interface documento {
     iddocumento: string,
-    documento: {
-        data: string,
-        nomecliente: string,
-        valor: string 
-    }
+    data: string,
+    nomecliente: string,
+    valor: string 
 }
 
-export interface post {
+export interface contrato {
     iddocumento: string,
-    documento: {
-        data: string,
-        nomecliente: string,
-        valor: string 
-    }
+    data: string,
+    nomecliente: string,
+    valor: string 
 }
 
 export interface login {

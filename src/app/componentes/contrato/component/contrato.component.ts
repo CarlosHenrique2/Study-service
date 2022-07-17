@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -7,10 +8,13 @@ import { Router } from '@angular/router';
   styleUrls: ['./contrato.component.scss']
 })
 export class ContratoComponent implements OnInit {
-
-  constructor(private router: Router) { }
+  registerForm!: FormGroup
+  constructor(
+    private fb: FormBuilder,
+    private router: Router) { }
 
   ngOnInit(): void {
+    this.genContrato()
   }
 
   goDocumento() {
@@ -31,6 +35,19 @@ export class ContratoComponent implements OnInit {
 
   goOut() {
     this.router.navigate([''])
+  }
+
+  genContrato() {
+    this.registerForm = this.fb.group({
+      contrato: [''],
+      data: [''],
+      nome_cliente: [''],
+      valor: ['']
+    })
+  }
+
+  sendContrato() {
+
   }
 
 }

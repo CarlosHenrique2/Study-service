@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { environment } from 'src/environments/environment.prod';
+import { Observable } from 'rxjs';
+import { documento } from 'src/app/interfaces/interfaces';
 
 
 @Injectable({
@@ -10,10 +11,9 @@ export class DocumentoService {
 
   constructor(private http: HttpClient) { }
 
-  getData() {
-   console.log(JSON.stringify(this.http.get("http://localhost:5000/documentos")));
+  getData(data: documento): Observable<documento> {
+   return this.http.get<documento>(`http://localhost:3000/documento/${data}`);
   }
 
-  
 
 }

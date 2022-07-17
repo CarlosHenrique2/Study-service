@@ -4,7 +4,8 @@ import { ContratoComponent } from './component/contrato.component';
 
 import { MatSliderModule } from '@angular/material/slider';
 import { MatInputModule } from '@angular/material/input';
-
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,10 @@ import { MatInputModule } from '@angular/material/input';
   imports: [
     CommonModule,
     MatSliderModule,
-    MatInputModule
+    MatInputModule,
+    ReactiveFormsModule,
+    FormsModule,
+    HttpClientModule
   ],
   exports: [ContratoComponent]
 })

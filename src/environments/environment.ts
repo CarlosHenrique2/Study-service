@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   urlLogin:  'http://localhost:3000/login',
-  urlDocument:  'http://localhost:3000/document',
+  urlDocument:  "http://localhost:3000/documento",
   urlContratos: "http://localhost:3000/contratos"
 };
 

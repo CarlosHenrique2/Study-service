@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
-
 import { documento } from 'src/app/interfaces/interfaces';
 import { DocumentoService } from '../service/documento.service';
+import { lastValueFrom } from 'rxjs';
 
 @Component({
   selector: 'app-documento',
@@ -13,6 +13,7 @@ import { DocumentoService } from '../service/documento.service';
 export class DocumentoComponent implements OnInit {
   searchDocument!: FormGroup;
   search!: FormGroup;
+  datos: any = {};
   constructor(
     private fb: FormBuilder,
     private documentoservice: DocumentoService,
@@ -20,7 +21,8 @@ export class DocumentoComponent implements OnInit {
     ) { }
 
   ngOnInit(): void {
-    
+    this.genDocumento()
+    this.reciveDocumento()
   }
 
   goDocumento() {
@@ -49,36 +51,27 @@ export class DocumentoComponent implements OnInit {
     })
   }
 
-  sendDocumento() {
-    let control = this.searchDocument.controls;
-
-    let documento = {
-      pesquisa: control['pesquisa'].value
-    }
-
-    this.documentoservice.getData()
+ async sendDocumento() {
+   let iddocumento = this.searchDocument.get('pesquisa')?.value
+   
+   console.log(this.documentoservice.getData(iddocumento));
+   const bananas = await lastValueFrom(this.documentoservice.getData(iddocumento));
+   this.datos = bananas;
+   /*  this.documentoservice.getData(iddocumento).subscribe({
+      next: (data) => { 
+        this.datos = data
+        return console.info(data) 
+      },
+      error: (error) => { return console.warn(error), alert('erro') },
+    }) */
   }
 
-
-  
-
   reciveDocumento(){
-
     this.search = this.fb.group({
-        data: ['', ''],
-        nomecliente: ['', ''],
-        valor: ['', ''],
-      })
-
-      let control = this.search.controls;
-      
-    
-      let recive = {
-        data: control['data_documeto'],
-        nomecliente: control['nome_cliente'],
-        valor: control['valor_documento']
-      }
-  
+   /*    data_documeto: {value: , disable: true},
+      nome_cliente: {value: , disable: true},
+      valor_documento: {value: , disable: true} */
+      }) 
   }
 
 }
