@@ -39,9 +39,10 @@ export class LoginComponent implements OnInit {
       login: control['login'].value,
       password: control['password'].value
     }
-    return console.log(JSON.stringify(json));
+     console.log(JSON.stringify(json));
+    return this.router.navigate(['home']);
     
-    this.loginSubmit$ = this.clientService.login().subscribe({
+   /*  this.loginSubmit$ = this.clientService.login().subscribe({
       next: (next) => { 
         
         console.info(next) 
@@ -50,7 +51,7 @@ export class LoginComponent implements OnInit {
       error: (error) => { console.warn(error), alert('erro') },
       complete: () => {
       }
-    })
+    }) */
   }
 
   ngOnDestroy(){
