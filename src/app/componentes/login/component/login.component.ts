@@ -39,7 +39,8 @@ export class LoginComponent implements OnInit {
       login: control['login'].value,
       password: control['password'].value
     }
-
+    return console.log(JSON.stringify(json));
+    
     this.loginSubmit$ = this.clientService.login().subscribe({
       next: (next) => { 
         
