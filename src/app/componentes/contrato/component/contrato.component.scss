@@ -9,6 +9,8 @@ main {
     font-weight: 400;
     font-size: 32px;
     line-height: 39px;
+    margin-left: 10px;
+    margin-top: 30px;
 }
 
 .title-info {
@@ -18,6 +20,8 @@ main {
     font-size: 24px;
     line-height: 29px;
     text-align: center;
+    margin-left: 10px;
+    margin-top: 30px;
 }
 
 .link-service {
@@ -54,7 +58,9 @@ main {
 }
 
 .menu_home_content {
-
+    display: flex;
+    flex-direction: column;
+    margin-top: 81px;
 }
 
 .menu_info {
@@ -64,6 +70,11 @@ main {
     border-radius: 50px;
 }
 
-.menu_info_content {
+.btn-menu {
+    margin-bottom: 30px;
+    margin-left: 10px;
+}
 
+.btn-home {
+    margin-top: 80px;
 }

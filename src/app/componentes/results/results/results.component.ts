@@ -26,7 +26,11 @@ export class ResultsComponent implements OnInit {
   }
 
   goHome() {
-    this.router.navigate(['home'])
+    this.router.navigate([''])
+  }
+
+  goOut() {
+    this.router.navigate([''])
   }
 
 }

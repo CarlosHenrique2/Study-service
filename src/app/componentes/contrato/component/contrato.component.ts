@@ -29,4 +29,8 @@ export class ContratoComponent implements OnInit {
     this.router.navigate(['home'])
   }
 
+  goOut() {
+    this.router.navigate([''])
+  }
+
 }

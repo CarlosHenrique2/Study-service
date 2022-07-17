@@ -39,6 +39,10 @@ export class DocumentoComponent implements OnInit {
     this.router.navigate(['home'])
   }
 
+  goOut() {
+    this.router.navigate([''])
+  }
+
   genDocumento() {
     this.searchDocument = this.fb.group({
       pesquisa: ['', '']

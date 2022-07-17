@@ -8,6 +8,43 @@
     font-family: 'Inter', sans-serif;
 }
 
+
+.title-service {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 39px;
+    margin-left: 10px;
+    margin-top: 30px;
+}
+
+.title-info {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.menu_home_content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 81px;
+}
+
+.btn-menu {
+    margin-bottom: 30px;
+    margin-left: 10px;
+}
+
+.btn-home {
+    margin-top: 80px;
+    margin-bottom: 20px;
+}
+
 .btn {
     height: 24px;
     width: 109px;
@@ -35,13 +72,15 @@
 
     label {
         font-size: 20px;
+        padding-top: 31px;
+        padding-bottom: 17px;
     }
 }
 
 .btnSearch {
     margin-top: 10px;
     margin-left: 10px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     background-color: #FA7070;
     padding: 5px;
     border-radius: 10px;
@@ -52,5 +91,5 @@
     font-weight: 200;
     font-size: 24px;
     line-height: 29px;
-    color: white;
+    color: white; 
 } 
